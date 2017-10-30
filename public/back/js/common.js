@@ -1,3 +1,19 @@
+//校验用户是否登录的功能
+//路径中，并没有login.html
+if(location.href.indexOf("login.html") < 0 ){
+  $.ajax({
+    type:"get",
+    url:"/employee/checkRootLogin",
+    success:function (data) {
+      if(data.error === 400){
+        //说明用户没有登录，跳转到登录页面
+        location.href = "login.html";
+      }
+    }
+  });
+}
+
+
 //点击icon_menu图标让左边导航栏移除
 $(".icon_menu").on("click",function () {
   //让侧边导航栏慢慢出去
