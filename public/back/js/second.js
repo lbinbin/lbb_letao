@@ -22,6 +22,7 @@ $(function () {
           onPageClicked: function (a, b, c, page) {
             currentPage = page;
             render();
+          
           }
         });
       }
