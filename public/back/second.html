@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
@@ -122,11 +122,11 @@
           <div class="form-group">
             
             <div class="dropdown">
-              
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
                       aria-haspopup="true" aria-expanded="true">
                 <span class="dropdown-text">请选择一级分类</span>
                 <span class="caret"></span>
+                <input type="hidden" name="categoryId" id="categoryId">
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                 
@@ -137,6 +137,7 @@
           </div>
           <div class="form-group">
             <input type="text" class="form-control" id="brandName" name="brandName" placeholder="请输入二级分类名称">
+            <input type="hidden" name="hot" value="2">
           </div>
   
           <div class="form-group">
@@ -175,17 +176,18 @@
 
 <script type="text/html" id="tpl2">
   {{each rows v i}}
-  <li><a href="javascript:;">{{v. categoryName}}</a></li>
+  <li><a href="javascript:;" data-id="{{v.id}}">{{v. categoryName}}</a></li>
   {{/each}}
 </script>
 
 
 <script src="lib/jquery/jquery.js"></script>
+<script src="lib/jquery-fileupload/jquery.ui.widget.js"></script>
+<script src="lib/jquery-fileupload/jquery.fileupload.js"></script>
 <script src="lib/bootstrap/js/bootstrap.js"></script>
 <script src="lib/bootstrap-validator/js/bootstrapValidator.js"></script>
 <script src="lib/bootstrap-paginator/bootstrap-paginator.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
-<script src="lib/echarts/echarts.min.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
 <script src="js/common.js"></script>
 <script src="js/second.js"></script>
