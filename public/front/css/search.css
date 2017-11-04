@@ -44,3 +44,6 @@ padding: 10px;
 .lt_history .content a{
   font-size: 12px;
 }
+.lt_history .content span{
+  line-height: 30px;
+}
